@@ -18,5 +18,12 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        DB::table('users')->insert([
+            'name' => 'Administrador',
+            'email' => 'omarg.perezm@gmail.com',
+            'email' => Hash::make('password'),
+        ])
+            //Ejecutar comando:
+        //php artisan migrate::fresh --seed
     }
 }
